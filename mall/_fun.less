@@ -1,0 +1,826 @@
+//背景部分
+@charset "UTF-8";
+.bg(...){
+	background: @arguments;
+}
+.bg-c(@color){
+	background-color: @color;
+}
+.bg-c(@rchannel,@gchannel,@bchannel){
+	background-color: rgb(@rchannel, @gchannel, @bchannel);
+}
+.bg-c-a(@rgbacolor){
+	background-color: @rgbacolor;
+}
+.parseRGB(@color){
+	@rchannel : red(@color);
+	@gchannel : green(@color);
+	@bchannel : blue(@color);
+	@rgbacolor : rgba(@rchannel, @gchannel, @bchannel, @alpha);
+}
+.bg-c-a(@color, @alpha){
+	.parseRGB(@color);
+	background-color: @rgbacolor;
+}
+.bg-c-a(@rchannel, @gchannel, @bchannel, @alpha){
+	background-color: rgba(@rchannel, @gchannel, @bchannel, @alpha);
+}
+.bg-c-ie(@color, @alpha){
+	.parseRGB(@color);
+	@argbcolor : argb(@rgbacolor);
+	background-color: transparent\9;
+	filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argbcolor},endColorstr=@{argbcolor})\9";
+}
+.bg-i(@url) when (@url = none){
+	background-image: none;
+}
+.bg-i(@url) when (default()){
+	background-image: url(@url);
+}
+.bg-p(...){
+	background-position: @arguments;
+}
+.bg-r(x){
+	background-repeat: repeat-x;
+}
+.bg-r(y){
+	background-repeat: repeat-y;
+}
+.bg-r(true){
+	background-repeat: repeat;
+}
+.bg-r(false){
+	background-repeat: no-repeat;
+}
+
+//背景定位
+.bg-a(fixed){
+	background-attachment: fixed;
+}
+.bg-a(scroll){
+	background-attachment: scroll;
+}
+.bg-f(){
+	background-attachment: fixed;
+}
+//背景模式
+.bg-s(@k){
+	background-size: @k;
+}
+.bg-s(@h, @v){
+	background-size: @h @v;
+}
+//背景过线性渡色，传参时最后一定要写分号
+.bg-lg(...){
+	background-image: -webkit-linear-gradient(@arguments); /* Safari 5.1 - 6.0 */
+	background-image: -o-linear-gradient(@arguments); /* Opera 11.1 - 12.0 */
+	background-image: -moz-linear-gradient(@arguments); /* Firefox 3.6 - 15 */
+	background-image: linear-gradient(@arguments); /* 标准的语法 */
+}
+.bg-lg-ie(@color1, @color2){
+	.parseRGB(@color1);
+	@argbcolor1 : argb(@rgbacolor);
+	.parseRGB(@color2);
+	@argbcolor2 : argb(@rgbacolor);
+	background-color: transparent\9;
+	filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argbcolor1},endColorstr=@{argbcolor2})\9";
+}
+
+//边框部分
+.bd(...){
+	border: @arguments;
+}
+.bd-c(...){
+	border-color: @arguments;
+}
+.bd-w(...){
+	border-width: @arguments;
+}
+.bd-s(...){
+	border-style: @arguments;
+}
+.bd-l(...){
+	border-left: @arguments;
+}
+.bd-l-c(@color){
+	border-left-color: @color;
+}
+.bd-l-w(@width){
+	border-left-width: @width;
+}
+.bd-l-s(@style){
+	border-left-style: @style;
+}
+.bd-r(...){
+	border-right: @arguments;
+}
+.bd-r-c(@color){
+	border-right-color: @color;
+}
+.bd-r-w(@width){
+	border-right-width: @width;
+}
+.bd-r-s(@style){
+	border-right-style: @style;
+}
+.bd-b(...){
+	border-bottom: @arguments;
+}
+.bd-b-c(@color){
+	border-bottom-color: @color;
+}
+.bd-b-w(@width){
+	border-bottom-width: @width;
+}
+.bd-b-s(@style){
+	border-bottom-style: @style;
+}
+.bd-t(...){
+	border-top: @arguments;
+}
+.bd-t-c(@color){
+	border-top-color: @color;
+}
+.bd-t-w(@width){
+	border-top-width: @width;
+}
+.bd-t-s(@style){
+	border-top-style: @style;
+}
+.out(...){
+	outline: @arguments;
+}
+.radius(...){
+	-webkit-border-radius: @arguments;
+	-moz-border-radius: @arguments;
+	border-radius: @arguments;
+}
+.round(){
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+
+//效果，一些杂七杂八的效果
+//低端IE8-用的透明
+.alpha(@num){
+	@n : @num * 100;
+	filter: ~"alpha(opacity=@{n})";
+}
+//IE9+及四大浏览器的透明
+.opa(@float){
+	opacity : @float;
+}
+.opacity(@float){
+	opacity : @float;
+}
+//盒阴影
+.bsd(...){
+	box-shadow+: @arguments;
+}
+.shadow(box,@rest...){
+	box-shadow+: @rest;
+}
+//文本阴影
+.tsd(...){
+	text-shadow+: @arguments;
+}
+.shadow(text,@rest...){
+	text-shadow+: @rest;
+}
+//鼠标
+.cur(@shape){
+	cursor: @shape;
+}
+.c-d(){
+	cursor: default;
+}
+.c-w(){
+	cursor: wait;
+}
+.c-h(){
+	cursor: help;
+}
+.c-p(){
+	cursor: pointer;
+}
+.c-n(){
+	cursor: not-allowed;
+}
+.c-t(){
+	cursor: text;
+}
+.c-m(){
+	cursor: move;
+}
+
+//盒模型，尺寸/边距/填充
+//尺寸
+.h(@height : auto){
+	height: @height;
+}
+.line(@n : normal){
+	line-height: @n;
+}
+.hline(@h){
+	height: @h;
+	line-height: @h;
+}
+.w(@width : auto){
+	width: @width;
+}
+.wh(@size) when(length(@size)=1){
+	width: @size;
+	height: @size;
+}
+.wh(@dimen) when(length(@dimen)=2){
+	width: extract(@dimen, 1);
+	height: extract(@dimen, 2);
+}
+.wh(@w, @h){
+	width: @w;
+	height: @h;
+}
+.whline(@size){
+	width: @size;
+	height: @size;
+	line-height: @size;
+}
+.maxh(@height : none){
+	max-height: @height;
+}
+.maxw(@width : none){
+	max-width: @width;
+}
+.minh(@height : 0){
+	min-height: @height;
+}
+.minw(@width : 0){
+	min-width: @width;
+}
+//边距
+.m(...){
+	margin: @arguments;
+}
+.ml(@m : auto){
+	margin-left: @m;
+}
+.mr(@m : auto){
+	margin-right: @m;
+}
+.mt(@m : auto){
+	margin-top: @m;
+}
+.mb(@m : auto){
+	margin-bottom: @m;
+}
+.ma(){
+	margin-left: auto;
+	margin-right: auto;
+}
+.ma(@mtb){
+	margin: @mtb auto;
+}
+.ma(@top, @bottom){
+	margin: @top auto @bottom;
+}
+//填充
+.p(...){
+	padding: @arguments;
+}
+.pl(@p){
+	padding-left: @p;
+}
+.pr(@p){
+	padding-right: @p;
+}
+.pt(@p){
+	padding-top: @p;
+}
+.pb(@p){
+	padding-bottom: @p;
+}
+//溢出
+.o(@way : hidden){
+	overflow: @way;
+}
+.o-s(){
+	overflow: scroll;
+}
+.o-a(){
+	overflow: auto;
+}
+.o-a-h(){
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+.o-a-v(){
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+//盒模式
+.d-b(){
+	display: block;
+}
+.block(){
+	display: block;
+}
+.d-i(){
+	display: inline;
+}
+.inline(){
+	display: inline;
+}
+.d-i-b(){
+	display: inline-block;
+}
+.inblock(){
+	display: inline-block;
+}
+.d-n(){
+	display: none;
+}
+.none(){
+	display: none;
+}
+.dis(@w : default){
+	display: @w;
+}
+.display(@w : default){
+	display: @w;
+}
+//可见
+.v-v(){
+	visibility: visible;
+}
+.visible(){
+	visibility: visible;
+}
+.v-h(){
+	visibility: hidden;
+}
+.hidden(){
+	visibility: hidden;
+}
+//盒式
+.bbox(){
+	box-sizing: border-box;
+}
+.cbox(){
+	box-sizing: content-box;
+}
+//定位，浮动，z轴
+.p-s(){
+	position: static;
+}
+.static(){
+	position: static;
+}
+.p-a(){
+	position: absolute;
+}
+.absolute(){
+	position: absolute;
+}
+.p-r(){
+	position: relative;
+}
+.relative(){
+	position: relative;
+}
+.p-f(){
+	position: fixed;
+}
+.fixed(){
+	position: fixed;
+}
+.clear(){
+	clear: both;
+}
+.l(@p : 0){
+	left: @p;
+}
+.r(@p : 0){
+	right: @p;
+}
+.t(@p : 0){
+	top: @p;
+}
+.b(@p : 0){
+	bottom: @p;
+}
+.lt(@l : 0, @t : 0){
+	left: @l;
+	top: @t;
+}
+.lb(@l : 0, @b : 0){
+	left: @l;
+	bottom: @b;
+}
+.rt(@r : 0, @t : 0){
+	right: @r;
+	top: @t;
+}
+.rb(@r : 0, @b : 0){
+	right: @r;
+	bottom: @b;
+}
+.z(@z){
+	z-index: @z;
+}
+.fl(){
+	float: left;
+}
+.fr(){
+	float: right;
+}
+.fn(){
+	float: none;
+}
+//文本效果，基本的对文字的操作
+.c(@c){
+	color: @c;
+}
+.family(@n){
+	font-family: @n;
+}
+.yahei(){
+	font-family: Microsoft Yahei;
+}
+.symsun(){
+	font-family: symsun;
+}
+.size(@s : 12px){
+	font-size: @s;
+}
+.bold(true){
+	font-weight: bold;
+}
+.bold(false){
+	font-weight: normal;
+}
+.italic(true){
+	font-style: italic;
+}
+.italic(false){
+	font-style: normal;
+}
+.t-l(){
+	text-align: left;
+}
+.t-c(){
+	text-align: center;
+}
+.t-r(){
+	text-align: right;
+}
+.nowrap(){
+	white-space: nowrap;
+}
+.wrap(){
+	white-space: normal;
+}
+.valign(@d : middle){
+	vertical-align: @d;
+}
+.cnt(@s : ''){
+	content: @s;
+}
+.indent(@n : 2em){
+	text-indent: @n;
+}
+.noline(){
+	text-decoration: none;
+}
+.decorate(@w : none){
+	text-decoration: @w;
+}
+.ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+//webkit内核专用多行溢出截取
+.clamp(@n : 2){
+    overflow: hidden;
+    -webkit-line-clamp: @n;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+.break(){
+	word-break: break-all;
+	word-wrap: break-word;
+}
+//CSS转换/过渡
+.transition(...){
+	transition+: @arguments;
+	-webkit-transition+: @arguments;
+	-moz-transition+: @arguments;
+	-ms-transition+: @arguments;
+	-o-transition+: @arguments;
+}
+
+//满尺寸，通常用于图片
+.full(){
+	width: 100%;
+	height: 100%;
+}
+//可调整大小
+.noresize(){
+	resize: none !important;
+}
+// 字母大小写
+.upper(){
+	text-transform: uppercase;
+}
+.lower(){
+	text-transform: lowercase;
+}
+.capital(){
+	text-transform: capitalize;
+}
+.small(){
+	font-variant: small-caps;
+}
+// 字、单词间隔
+.lsp(@px){
+	letter-spacing: @px;
+}
+.spacing(letter,@px){
+	letter-spacing: @px;
+}
+.wsp(@px){
+	word-spacing: @px;
+}
+.spacing(word,@px){
+	word-spacing: @px;
+}
+
+.FILTER(){
+	//灰度效果，0为无效果
+	.grayscale(@float: 1){
+		@per: percentage(@float);
+		filter:grayscale(@per);
+		-moz-filter:grayscale(@per);
+		-ms-filter:grayscale(@per);
+		-o-filter:grayscale(@per);
+		-webkit-filter:grayscale(@per);
+		filter:Gray\9;
+	}
+	//图片古典化效果，0为无效果
+	.sepia(@float: 1){
+		@per: percentage(@float);
+	    -webkit-filter: sepia(@per);  
+	    -moz-filter:sepia(@per);
+	    -ms-filter: sepia(@per);
+	    -o-filter: sepia(@per);
+	    filter: sepia(@per);  
+	}
+	//高斯模糊，参数整数，0为无效果
+	.blur(@px: 1px){
+	    -webkit-filter: blur(@px);
+	    -moz-filter: blur(@px);
+	    -ms-filter: blur(@px);
+	    -o-filter: blur(@px);
+	    filter: blur(@px); 
+	    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=@px, MakeShadow=false)~"\9";
+	}
+	//反色，0为无效果
+	.invert(@float : 1){
+		-webkit-filter: invert(@float);
+		-moz-filter: invert(@float);
+		-ms-filter: invert(@float);
+		-o-filter: invert(@float);
+		filter: invert(@float); 
+	}
+	//饱和度，1为无效果
+	.saturate(@int : 1){
+	    -webkit-filter: saturate(@int);
+	    -moz-filter: saturate(@int);
+	    -ms-filter: saturate(@int);
+	    -o-filter: saturate(@int);
+	    filter: saturate(@int); 
+	}
+	//对比度，1为无效果
+    .contrast(@int : 1){
+	    -webkit-filter: contrast(@int);
+	    -moz-filter: contrast(@int);
+	    -ms-filter: contrast(@int);
+	    -o-filter: contrast(@int);
+	    filter: contrast(@int); 
+    }
+    //亮度，1为无效果
+   .brightness(@int : 1){
+	    -webkit-filter: brightness(@int);
+	    -moz-filter: brightness(@int);
+	    -ms-filter: brightness(@int);
+	    -o-filter: brightness(@int);
+	    filter: brightness(@int); 
+    }
+    //色调旋转，0-359deg
+    .hue-rotate(@deg: 0deg){
+	    -webkit-filter: hue-rotate(@deg);
+	    -moz-filter: hue-rotate(@deg);
+	    -ms-filter: hue-rotate(@deg);
+	    -o-filter: hue-rotate(@deg);
+	    filter: hue-rotate(@deg); 
+    }
+    /**  格式，filter: drop-shadow(x-offset y-offset 阴影模糊半径 阴影颜色)
+     *  x-offset和y-offset为阴影的相对于元素左上角的位移距离；
+     * 注意：
+     *     1. 阴影的外观受border-radius样式的影响；
+     *     2. :after和:before等伪元素会继承阴影的效果。
+     */
+    .drop-shadow(@x:0, @y:0, @blur:0, @c: black){
+		-webkit-filter: drop-shadow(@x @y @blur @c);
+		-moz-filter: drop-shadow(@x @y @blur @c);
+		-ms-filter: drop-shadow(@x @y @blur @c);
+		-o-filter: drop-shadow(@x @y @blur @c);
+		filter: drop-shadow(@x @y @blur @c); 
+		filter: DropShadow(Color=@c,OffX=@x,OffY=@y,Positive=1)~"\9";
+    }
+}
+//CSS3转换
+.transform(...){
+	transform: @arguments;
+	-webkit-transform: @arguments;
+	-moz-transform: @arguments;
+	-ms-transform: @arguments;
+	-o-transform: @arguments;
+}
+.translate(@x,@y){
+	transform+_: translate(@x,@y);
+	-webkit-transform+_: translate(@x,@y);
+	-moz-transform+_: translate(@x,@y);
+	-ms-transform+_: translate(@x,@y);
+	-o-transform+_: translate(@x,@y);
+}
+.scale(@x){
+	transform+_: scale(@x,@x);
+	-webkit-transform+_: scale(@x,@x);
+	-moz-transform+_: scale(@x,@x);
+	-ms-transform+_: scale(@x,@x);
+	-o-transform+_: scale(@x,@x);
+}
+.scale(@x,@y){
+	transform+_: scale(@x,@y);
+	-webkit-transform+_: scale(@x,@y);
+	-moz-transform+_: scale(@x,@y);
+	-ms-transform+_: scale(@x,@y);
+	-o-transform+_: scale(@x,@y);
+}
+.skew(@x,@y){
+	@xd: unit(@x,deg);
+	@yd: unit(@y,deg);
+	transform+_: skew(@xd,@yd);
+	-webkit-transform+_: skew(@xd,@yd);
+	-moz-transform+_: skew(@xd,@yd);
+	-ms-transform+_: skew(@xd,@yd);
+	-o-transform+_: skew(@xd,@yd);
+}
+.rotate(@r){
+	@rd: unit(@r,deg);
+	transform+_: rotate(@rd);
+	-webkit-transform+_: rotate(@rd);
+	-moz-transform+_: rotate(@rd);
+	-ms-transform+_: rotate(@rd);
+	-o-transform+_: rotate(@rd);
+}
+.translate3D(@x,@y,@z){
+	transform+_: translate3D(@x,@y,@z);
+	-webkit-transform+_: translate3D(@x,@y,@z);
+	-moz-transform+_: translate3D(@x,@y,@z);
+}
+.scale3D(@x){
+	transform+_: scale3D(@x,@x,@x);
+	-webkit-transform+_: scale3D(@x,@x,@x);
+	-moz-transform+_: scale3D(@x,@x,@x);
+}
+.scale3D(@x,@y,@z){
+	transform+_: scale3D(@x,@y,@z);
+	-webkit-transform+_: scale3D(@x,@y,@z);
+	-ms-transform+_: scale3D(@x,@y,@z);
+}
+.scaleX(@s){
+	transform+_: scaleX(@s);
+	-webkit-transform+_: scaleX(@s);
+	-moz-transform+_: scaleX(@s);
+}
+.scaleY(@s){
+	transform+_: scaleY(@s);
+	-webkit-transform+_: scaleY(@s);
+	-moz-transform+_: scaleY(@s);
+}
+.scaleZ(@s){
+	transform+_: scaleZ(@s);
+	-webkit-transform+_: scaleZ(@s);
+	-moz-transform+_: scaleZ(@s);
+}
+.rotate3D(@x,@y,@z,@r){
+	@rd: unit(@r,deg);
+	transform+_: rotate3D(@x,@y,@z,@rd);
+	-webkit-transform+_: rotate3D(@x,@y,@z,@rd);
+	-moz-transform+_: rotate3D(@x,@y,@z,@rd);
+}
+.rotateX(@r){
+	@rd: unit(@r,deg);
+	transform+_: rotateX(@rd);
+	-webkit-transform+_: rotateX(@rd);
+	-moz-transform+_: rotateX(@rd);
+}
+.rotateY(@r){
+	@rd: unit(@r,deg);
+	transform+_: rotateY(@rd);
+	-webkit-transform+_: rotateY(@rd);
+	-moz-transform+_: rotateY(@rd);
+}
+.rotateZ(@r){
+	@rd: unit(@r,deg);
+	transform+_: rotateZ(@rd);
+	-webkit-transform+_: rotateZ(@rd);
+	-moz-transform+_: rotateZ(@rd);
+}
+//生成动画
+.anim(...){
+	animation+: @arguments;
+	-webkit-animation+: @arguments;
+	-moz-animation+: @arguments;
+	-o-animation+: @arguments;
+}
+//CSS3动画，@name为动画名称，@mixin为预定义的一组动画值，比如使用xx%，或from to的
+.keyframes(@name,@mixin){
+	@keyframes @name{
+		@mixin();
+	}
+	@-webkit-keyframes @name{
+		@mixin();
+	}
+}
+//转换中心，2D或3D，FF/IE/OPERA不支持3D
+.origin(@x,@y){
+	transform-origin:@x @y;
+	-webkit-transform-origin:@x @y; /* Safari and Chrome */
+	-moz-transform-origin:@x @y; /* Safari and Chrome */
+	-ms-transform-origin:@x @y; /* IE 9 */
+	-o-transform-origin:@x @y; /* Safari and Chrome */
+}
+.origin(@x,@y,@z){
+	transform-origin:@x @y @z;
+	-webkit-transform-origin:@x @y @z; /* Safari and Chrome */
+	-moz-transform-origin:@x @y @z; /* Safari and Chrome */
+}
+// 引入字体，参数分别是：
+// @name  ：字体名，字符串
+// @url   ：路径，字符串
+// @type  ：类型，字符串（otf:opentype，ttf:truetype）
+// @bold  ：是否加粗，关键字，bold/normal
+// @italic：是否斜体，关键字，italic/normal
+.font(@name; @url; @type; @bold : normal; @italic : normal){
+	@font-face{
+		font-family: @name;
+		src: url(@url) format(@type);
+		font-weight: @bold;
+		font-style: @italic;
+	}
+}
+// 最小宽
+.minw(@width1){
+	min-width: @width1;
+}
+.maxw(@width2){
+	max-wdith:@width2;
+}
+
+// 倒计时
+// function time(day,hour,minute,second){
+//     var date=new Date(),
+//         month1=date.getMonth()+1,
+// 	    day1=date.getDate(),
+// 	    hour1=date.getHours(),
+// 	    minute1=date.getMinutes(),
+// 	    second1=date.getSeconds();
+
+
+
+//     var day2=day-day1,
+//         hour2=day2*24+hour-hour1,
+//         minute2=hour2*60+minute-minute1,
+//         second2=minute2*60+second-second1;
+
+
+//         var seconds=second2%60,
+//         minutes=parseInt(second2/60)%60,
+//         hours=parseInt(second2/3600)%24,
+//         days=parseInt(second2/86400);
+ 
+// 	    $(".time").text(days+"日"+hours+"时"+minutes+"分"+seconds+"秒");
+
+// 	    if(days==0&&minutes==0&&hours==0&seconds==0) clearInterval(t);
+  
+   
+//    }
+// time(12,12,0,0);
+// var t=setInterval(function(){
+// 	time(13,12,0,0);
+//  },1e3);  

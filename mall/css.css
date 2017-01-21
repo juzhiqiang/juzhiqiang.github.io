@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/*新的基础样式*/
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 整站通用样式 全站兼容标准IE8+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Microsoft Yahei;
+  font-style: normal;
+  font-weight: normal;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+q {
+  quotes: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a img {
+  border: 0;
+}
+.common {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+body.cover:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+}
+body.window:before {
+  position: fixed;
+}
+body.html:before {
+  position: absolute;
+}
+input::-ms-clear {
+  display: none;
+}
+/*下边三个占位符一定不能写在一起，不然会失效*/
+:-moz-placeholder {
+  color: #999;
+}
+::-moz-placeholder {
+  color: #999;
+}
+:-ms-input-placeholder {
+  color: #999;
+}
+::-webkit-input-placeholder {
+  color: #999;
+}
+:focus,
+:invalid {
+  outline: none;
+}
+textarea {
+  resize: none !important;
+}
+.clearfix {
+  clear: both !important;
+  float: none !important;
+  zoom: 1\9;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  float: none;
+}
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+body {
+  _background-image: url(about:blank);
+  /*用浏览器空白页面作为背景*/
+  _background-attachment: fixed;
+  /* prevent screen flash in IE6 确保滚动条滚动时，元素不闪动*/
+}
+/*半透明背景*/
+/*全屏插件，为了方便横竖居中，使用表格*/
+.FullScreenPlugin {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 55555;
+}
+/*禁用*/
+.disabled,
+[disabled] {
+  cursor: not-allowed !important;
+}
+body {
+  background-color: #f7f7f7;
+}
+.mailu {
+  margin-bottom: 20px;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  padding-top: 30px;
+}
+.logo p {
+  display: inline-block;
+  font-size: 25px;
+  color: #999;
+  vertical-align: 1.3em;
+  margin-left: 10px;
+}
+.right {
+  float: right;
+  margin-right: 20px;
+  line-height: 115px;
+}
+.right a {
+  color: #448ef1;
+}
+.zhuche {
+  background-color: white;
+  text-align: center;
+}
+.zhuche .form-group {
+  position: relative;
+  margin-bottom: 35px;
+}
+.zhuche .form-group:first-child {
+  padding-top: 20px;
+}
+.zhuche .form-group i {
+  position: absolute;
+  left: 370px;
+  top: 28px;
+  font-size: 28px;
+}
+.zhuche .form-group .passwords {
+  left: 365px;
+  top: 12px;
+  font-size: 20px;
+}
+.zhuche input {
+  width: 420px;
+  height: 20px;
+  padding: 10px 10px 10px 30px;
+}
+.zhuche label {
+  margin-left: 5px;
+  color: red;
+}
+.yanzm input {
+  width: 298px;
+  padding: 10px;
+}
+.yanzm img {
+  vertical-align: -0.95em;
+}
+.yanzm a {
+  color: #448ef1;
+}
+#checkbox input {
+  width: 15px;
+  vertical-align: -0.3em;
+}
+#checkbox a {
+  color: #448ef1;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+#checkbox a:hover {
+  color: Red;
+}
+.btn {
+  width: 404px;
+  height: 40px;
+  margin: 10px 0 50px;
+  background-color: #e61952;
+  border: 0;
+  cursor: pointer;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.btn:hover {
+  background-color: #FF3366;
+}
+.meail,
+.password,
+.pass,
+.zhanghao,
+.meails {
+  position: relative;
+}
+.meail .wu,
+.password .wu,
+.pass .wu,
+.zhanghao .wu,
+.meails .wu,
+.meail .wus,
+.password .wus,
+.pass .wus,
+.zhanghao .wus,
+.meails .wus,
+.meail .fa-check-circle-o,
+.password .fa-check-circle-o,
+.pass .fa-check-circle-o,
+.zhanghao .fa-check-circle-o,
+.meails .fa-check-circle-o,
+.meail .wuu,
+.password .wuu,
+.pass .wuu,
+.zhanghao .wuu,
+.meails .wuu {
+  width: 240px;
+  color: red;
+  position: absolute;
+  left: 350px;
+  bottom: -25px;
+  display: none;
+}
+.meail .kong,
+.password .kong,
+.pass .kong,
+.zhanghao .kong,
+.meails .kong,
+.meail .gsc,
+.password .gsc,
+.pass .gsc,
+.zhanghao .gsc,
+.meails .gsc,
+.meail .zq,
+.password .zq,
+.pass .zq,
+.zhanghao .zq,
+.meails .zq {
+  width: 240px;
+  color: red;
+  position: absolute;
+  left: 135px !important;
+  bottom: 10px !important;
+  display: none;
+}
+.meails .kong,
+.meails .gsc,
+.meails .zq {
+  left: 105px !important;
+}
+.fa-check-circle-o {
+  left: 260px !important;
+  bottom: -25px !important;
+  color: green !important;
+}
+.wj {
+  margin-top: 80px;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: left;
+}
+.wj .btn-primary {
+  width: 120px;
+  margin-left: 50px;
+  color: white;
+  font-weight: bold;
+}
+#fh {
+  text-align: center;
+}
+#fh a {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 14px;
+  color: white;
+}
+legend {
+  font-size: 25px;
+  background-color: #f9f9f9;
+  width: 98.3%;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  padding-left: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.tis {
+  width: 60%;
+  background-color: #FFFFCC;
+  padding: 10px 50px;
+  text-align: left;
+  margin: 20px auto 26px auto;
+  border: 1px solid #FFCC33;
+}
+.tis h5 {
+  font-size: 18px;
+  color: #666;
+}
+.tis h5 i {
+  font-size: 25px;
+}
+.tis p {
+  font-size: 14px;
+  color: #e14700;
+}
+.fo {
+  position: relative;
+  margin-left: 320px;
+}
+.fo .gong {
+  position: absolute;
+  display: inline-block;
+  left: 113px;
+  top: 13px;
+  font-size: 22px;
+}
+.fo .fa-mobile {
+  left: 150px;
+  font-size: 25px;
+}
+.fo input {
+  width: 360px;
+  height: 35px;
+  font-size: 18px;
+  margin-bottom: 36px;
+  padding: 5px 5px 5px 36px;
+}
+.meails {
+  margin-left: 352px;
+}

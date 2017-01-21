@@ -1,0 +1,3096 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>麦露</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="">
+<!--[if lt IE 9]>
+<script>
+document.write("<span style='color:#fff'>请不要使用低端浏览器查看，可以使用IE9+，火狐，谷歌，Opera，Safari或任何国产Webkit内核的浏览器。</span>")
+document.execCommand("stop");
+</script>
+<![endif]-->
+</head>
+<body>
+	<!-- 登录 开始 -->
+	<div class="deng">
+		<div class="ordinary">
+			<div class="lu">
+				<q class="cur">普通登录</q>
+				<q>短信登录</q>
+				<i>+</i>
+			</div>
+			<div class="content">
+				<form action="" method="POST" role="form" class="form off">
+					<div class="form-group">
+						<div class="tishi">*请您输入正确的账号/密码</div>
+						<div class="tishis">*账号不能为空</div>
+						<div class="password">*密码不能少于6位且不能大于16位</div>
+						<label for="">账　号</label>
+						<i class="fa fa-user"></i>
+						<input type="text" class="form-control" id="account" placeholder="手机号/邮箱" minlength="6" name="account">
+					</div>
+					<div class="form-group">
+						<label for="">密　码</label>
+						<i class="fa fa-unlock-alt"></i>
+						<input type="password" class="form-control" id="mima" placeholder="请输入您的密码" name="password" disabled="disabled">
+					</div>
+					<div class="form-group check">
+						<input type="checkbox" checked class="form-control checkbox" id="" >
+						<label for="">下次自动登录</label>
+					</div>
+					<button type="submit" class="btn btn-primary button1" value="立即登录">立即登录</button>
+					<div class="new">
+						<a href="registered.html">注册新帐号</a>
+						<a href="Forgot.html">忘记密码？</a>
+					</div>
+				</form>
+				<form action="" method="POST" role="form" class="form forms">
+					<div class="form-group">
+						<div class="mobiles">*请您输入正确的手机号</div>
+						<label for="">手机号</label>
+						<i class="fa fa-mobile"></i>
+						<input type="text" class="form-control" id="mobile" placeholder="请输入您的手机号" 
+						name="mobile">
+					</div>
+					<div class="form-group">
+						<label for="">验证码</label>
+						<input type="text" class="form-control two" id="" placeholder="请输入您的验证码" name="checkcode">
+						<!-- <img src="autocode.PHP" onclick="this.src=autocode.php?'+Math.random();" alt="验证码"/> -->
+						<img src="images/pinpai/captcha.jpg" alt="images/pinpai/captcha.jpg" >
+						<a href="">换一张</a>
+					</div>
+					<div class="form-group">
+						<label for="">校验码</label>
+						<input type="text" class="form-control tree" id="" placeholder="请输入短信校验码">
+						<button type="" class="btn btn-primary jiaoyan " id="jiaoyan">免费获取校验码</button>
+					</div>
+					<div class="form-group check">
+						<input type="checkbox" checked class="form-control checkbox " id="" >
+						<label for="">下次自动登录</label>
+					</div>
+					<button type="submit" class="btn btn-primary button1">立即登录</button>
+					<div class="new">
+						<a href="registered.html">注册新帐号</a>
+						<a href="#">校验码常见问题</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 登录 结束 -->
+	<!-- 头部 开始 -->
+    <div class="header">
+    	<!-- 头部 上 开始-->
+    	<div class="navbg clearfix">
+	    	<ol class="nav common">
+	    		<li class="dl">
+		    		<q>您好,欢迎您来到麦露！<a href="#" id="login">登录 / 注册</a></q>
+	    		</li>
+	    		<li class="service">
+	    			<div class="la">
+	    				<i class="fa fa-support"></i>
+	    				<span>客户服务</span>
+	    			</div>
+	    			<ul>
+	    				<li><a href="#">帮助中心</a></li>
+	    				<li><a href="#">查找门店</a></li>
+	    				<li><a href="#">帮客预约</a></li>
+	    				<li><a href="#">退换/维修</a></li>
+	    				<li><a href="#">在线咨询</a></li>
+	    				<li><a href="#">建议反馈</a></li>
+	    			</ul>
+	    		</li>
+	    		<li class="order">
+	    			<div class="la">
+		    			<i class="fa fa-user"></i>
+		    			<span>我的订单</span>
+	    			</div>
+	    			<ul>
+	    				<li><a href="#">待支付</a></li>
+	    				<li><a href="#">待收货</a></li>
+	    				<li><a href="#">待评价</a></li>
+	    				<li><a href="#">修改订单</a></li>
+	    			</ul>
+		    	</li>
+	    	</ol>
+    	</div>
+    	<!-- 头部 上 结束-->
+    	<!-- logo 搜索 开始 -->
+    	<div class="mailu common">
+    		<div class="logo">
+    			<img src="images/logo.png" alt="">
+    		</div>
+    		<form action="" method="POST" role="form" class="searchs">
+    			<div class="form-group search">
+    				<i class="fa fa-search"></i>
+    				<input type="text" class="form-control" id="" placeholder="搜索">
+    				<input type="submit" id="btnSearch" class="control" value="找商品">
+    			</div>
+				<ul>
+					<li><a href="#">海苔</a></li>
+					<li><a href="#">果冻</a></li>
+					<li><a href="#">饼干</a></li>
+					<li><a href="#">锅巴</a></li>
+					<li><a href="#">威化饼</a></li>    
+				</ul>
+    		</form>
+    		<div class="right">
+    			<img src="images/lianxi.jpg" alt="">
+    			<q>
+	    			<h4>免费热线电话</h4>
+	    			<h5>0315-6589763</h5>
+    			</q>
+    		</div>
+    	</div>
+    	<!-- logo 搜索 结束 -->
+    </div>
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	<div class="guide clearfix">
+		<ul class="common">
+			<li>
+				<p>所有商品分类<i class="fa fa-list-ul"></i></p>
+				<ul class="cookies">
+					<li class="yi">
+						<a href="#">饼干糕点</a>
+						<ul class="zuo">
+							<li>
+								<span><a href="#">饼干</a></span>
+								<span><a href="#">威化饼</a></span>
+								<span><a href="#">曲奇</a></span>
+								<span><a href="#">苏打饼</a></span>
+								<span><a href="#">涂层饼干</a></span>
+								<span><a href="#">中式糕点</a></span>
+								<span><a href="#">蛋卷/酥</a></span>
+								<span><a href="#">蛋糕</a></span>
+							</li>
+							<li>
+								<a href="#"><img src="images/b1.jpg" alt=""></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/b2.jpg" alt=""></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/b3.jpg" alt=""></a>
+							</li>
+						</ul>
+					</li>
+					<li class="yi">
+						<a href="#">肉类制品</a>
+						<ul class="zuo">
+							<li>
+								<a href="#">鸡肉制品</a>
+								<a href="#">鸭肉制品</a>
+								<a href="#">牛肉制品</a>
+								<a href="#">猪肉制品</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/r1.jpg" alt=""></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/r2.jpg" alt=""></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/r3.jpg" alt=""></a>
+							</li>
+						</ul>
+					</li>
+					<li class="yi">
+						<a href="#">数码电器</a>
+						<ul class="zuo">
+							<li>
+								<h4><a href="#">手机通讯</a></h4>
+								<div class="mou">
+									<span><a href="#">Iphone</a></span>
+									<span><a href="#">华为</a></span>
+									<span><a href="#">三星</a></span>
+									<span><a href="#">小米</a></span>
+									<span><a href="#">魅族</a></span>
+									<span><a href="#">诺基亚</a></span>
+									<span><a href="#">联想</a></span>
+									<span><a href="#">荣耀</a></span>
+									<span><a href="#">ViVO</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">摄影摄像</a></h4>
+								<div class="mou">
+									<span><a href="#">单反</a></span>
+									<span><a href="#">微单</a></span>
+									<span><a href="#">数码相机</a></span>
+									<span><a href="#">摄像机</a></span>
+									<span><a href="#">镜头</a></span>
+									<span><a href="#">拍立得</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">数码配件</a></h4>
+								<div class="mou">
+									<span><a href="#">储存卡</a></span>
+									<span><a href="#">读卡器</a></span>
+									<span><a href="#">三脚架</a></span>
+									<span><a href="#">摄影包</a></span>
+									<span><a href="#">电池/充电器</a></span>
+									<span><a href="#">机身附件</a></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="yi">
+						<a href="#">母婴 玩具</a>
+						<ul class="zuo">
+							<li>
+								<h4><a href="#">孕婴奶粉</a></h4>
+								<div class="mou">
+									<span><a href="#">1段</a></span>
+									<span><a href="#">2段</a></span>
+									<span><a href="#">3段</a></span>
+									<span><a href="#">4段</a></span>
+									<span><a href="#">特配奶粉</a></span>
+									<span><a href="#">有机奶粉</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">尿裤湿巾</a></h4>
+								<div class="mou">
+									<span><a href="#">新生儿</a></span>
+									<span><a href="#">S号尿裤</a></span>
+									<span><a href="#">M号尿裤</a></span>
+									<span><a href="#">L号尿裤</a></span>
+									<span><a href="#">拉拉裤</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">喂养用品</a></h4>
+								<div class="mou">
+									<span><a href="#">奶嘴</a></span>
+									<span><a href="#">尿裤</a></span>
+									<span><a href="#">吸奶器</a></span>
+									<span><a href="#">口腔清洁</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">儿童玩具</a></h4>
+								<div class="mou">
+									<span><a href="#">0-6月</a></span>
+									<span><a href="#">6-12月</a></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="yi">
+						<a href="#">运动服饰</a>
+						<ul class="zuo">
+							<li>
+								<h4><a href="#">当季流行</a></h4>
+								<div class="mon">
+									<span><a href="#">羽绒服</a></span>
+									<span><a href="#">大衣女</a></span>
+									<span><a href="#">家居服</a></span>
+									<span><a href="#">保暖内衣</a></span>
+									<span><a href="#">牛仔裤</a></span>
+									<span><a href="#">夹克男</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">浪漫裙装</a></h4>
+								<div class="mon">
+									<span><a href="#">秋冬连衣裙</a></span>
+									<span><a href="#">牛仔裙</a></span>
+									<span><a href="#">包臀裙</a></span>
+									<span><a href="#">百褶裙</a></span>
+									<span><a href="#">半身裙</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">特色服装</a></h4>
+								<div class="mon">
+									<span><a href="#">妈妈装</a></span>
+									<span><a href="#">唐装</a></span>
+									<span><a href="#">旗袍</a></span>
+									<span><a href="#">情趣内衣</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">袜子配饰</a></h4>
+								<div class="mon">
+									<span><a href="#">棉袜</a></span>
+									<span><a href="#">女士围巾</a></span>
+									<span><a href="#">男士围巾</a></span>
+									<span><a href="#">瘦身袜</a></span>
+								</div>
+							</li>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+					<li class="yi">
+						<a href="#">汽车用品/服务</a>
+						<ul class="zuo">
+							<li>
+								<h4><a href="#">汽车生活</a></h4>
+								<div class="mon">
+									<span><a href="#">摩托车</a></span>
+									<span><a href="#">小型车</a></span>
+									<span><a href="#">紧凑型车</a></span>
+									<span><a href="#">SUV</a></span>
+									<span><a href="#">MPV</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">车载电器</a></h4>
+								<div class="mon">
+									<span><a href="#">车载电源</a></span>
+									<span><a href="#">车载净化器</a></span>
+									<span><a href="#">车载冰箱</a></span>
+								
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">汽车用品</a></h4>
+								<div class="mon">
+									<span><a href="#">机油</a></span>
+									<span><a href="#">车灯</a></span>
+									<span><a href="#">轮胎</a></span>
+									<span><a href="#">胎压监测</a></span>
+									<span><a href="#">导航仪</a></span>
+									<span><a href="#">倒车雷达</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">汽车服务</a></h4>
+								<div class="mon">
+									<span><a href="#">加油卡</a></span>
+									<span><a href="#">保养服务</a></span>
+									<span><a href="#">安装服务</a></span>
+									<span><a href="#">快修先生</a></span>
+									<span><a href="#">尚车一品</a></span>
+								</div>
+							</li>
+						</ul>						
+					</li>
+					<li class="yi">
+						<a href="#"> 纸品/清洁</a>
+						<ul class="zuo">
+							<li>
+								<h4><a href="#">生活用纸</a></h4>
+								<div class="mon">
+									<span><a href="#">抽纸</a></span>
+									<span><a href="#">手帕纸</a></span>
+									<span><a href="#">厨房用纸</a></span>
+									<span><a href="#">平板纸</a></span>
+									<span><a href="#">湿巾纸</a></span>
+									<span><a href="#">卷纸</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">清洁洗护</a></h4>
+								<div class="mon">
+									<span><a href="#">洗衣液</a></span>
+									<span><a href="#">家庭清洁</a></span>
+									<span><a href="#">洗洁精</a></span>
+									<span><a href="#">洁厕剂</a></span>
+									<span><a href="#">洗衣粉/皂</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">身体护理</a></h4>
+								<div class="mon">
+									<span><a href="#">洗浴露</a></span>
+									<span><a href="#">洗发露</a></span>
+									<span><a href="#">护手霜</a></span>
+									<span><a href="#">足部护理</a></span>
+									<span><a href="#">润体乳</a></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li class="yi">
+						<a href="#">无人机/机器人</a>
+						<ul class="zuo">
+							<li>
+								<h4><a href="#">智能机器人</a></h4>
+								<div class="mon">
+									<span><a href="#">派宝机器人</a></span>
+									<span><a href="#">小勇机器人</a></span>
+									<span><a href="#">小鱼在家陪伴机器人</a></span>
+									<span><a href="#">布丁家庭机器人</a></span>
+									<span><a href="#">小智智能管家机器人</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">清洁机器人</a></h4>
+								<div class="mon">
+									<span><a href="#">浦桑尼克扫地机器人</a></span>
+									<span><a href="#">极思维清洁机器人</a></span>
+									<span><a href="#">飞科扫地机器人</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">车载机器人</a></h4>
+								<div class="mon">
+									<span><a href="#">智能车载机器人</a></span>
+								</div>
+							</li>
+							<li>
+								<h4><a href="#">无人机</a></h4>
+								<div class="mon">
+									<span><a href="#">普宇无人机</a></span>
+									<span><a href="#">零度无人机</a></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">首页</a>
+			</li>
+			<li>
+				<a href="#">秒杀</a>
+			</li>
+			<li>
+				<a href="#">新品</a>
+			</li>
+			<li>
+				<a href="#">招聘求职</a>
+			</li>
+			<li>
+				<a href="#">全程店铺</a>
+			</li>
+			<li>
+				<a href="#">优惠促销</a>
+			</li>
+			<li class="zhuans">
+				<div class="zhuan">
+					<i class="fa fa-volume-down"></i>
+					<div class="right">
+						<p><a href="#">【一降到底】全场6折起</a></p>
+						<p><a href="#">【通知】关于双十一物流配送</a></p>
+						<p><a href="#">企业资质文件</a></p>
+						<p><a href="#">【一降到底】全场6折起</a></p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- 导航 结束 -->
+	<!--banner 开始  -->
+	<div class="banner">
+		<div class="ban common">
+			<ul class="banners ">
+				<li>
+					<a href="#"><img src="images/banner1.jpg" alt=""></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/banner2.jpg" alt=""></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/banner3.jpg" alt=""></a>
+				</li>
+				<li>
+					<a href="#"><img src="images/banner4.jpg" alt=""></a>
+				</li>
+			</ul>
+		</div>
+		<ol class="indexing">
+			<li class="cur"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+	</div>
+	<!--banner 结束  -->
+	<!-- 内容 开始 -->
+	<div class="common">
+		<!-- 每日秒杀 开始 -->
+		<div class="seckill">
+			<h3>每日秒杀<small>Daily & Seckill</small>
+				<q class="time" style="text-align:center;">
+					<strong id="hour_show">0时</strong>
+					<strong id="minute_show">0分</strong>
+					<strong id="second_show">0秒</strong>
+				</q>
+				 <!-- <div id="fnTimeCountDown" data-end="2017/01/20 11:21:00">
+			        <span class="hour">00</span>时
+			        <span class="mini">00</span>分
+			        <span class="sec">00</span>秒
+			    </div> -->
+			</h3>
+			<div class="seckills clearfix">
+				<div class="left">
+					<a href="#"><img src="images/left1.webp.jpg" alt=""></a>
+				</div>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/ms2.jpg" alt=""></a>
+						<p><a href="#">Hello 丽芝士纳宝帝奶酪威化</a></p>
+						<p><i class="fa fa-rmb"></i>10.40</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/ms3.png" alt="" width="140px" height="140px"></a>
+						<p><a href="#">ATO 金控纯牛奶</a></p>
+						<p><i class="fa fa-rmb"></i>10.40</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/ms4.jpg" alt=""></a>
+						<p><a href="#">Hello Kitty果汁软糖芒果</a></p>
+						<p><i class="fa fa-rmb"></i>10.40</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/ms5.jpg" alt=""></a>
+						<p><a href="#">上新啦100%正品高销量吸尘器</a></p>
+						<p><i class="fa fa-rmb"></i>10.40</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/sm6.jpg" alt=""></a>
+						<p><a href="#">有机认证 野山茶油2L 农家茶籽油 食用油 单瓶平装</a></p>
+						<p><i class="fa fa-rmb"></i>10.40</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/ms7.jpg" alt=""></a>
+						<p><a href="#">奥迪双钻超级飞侠机器人</a></p>
+						<p><i class="fa fa-rmb"></i>10.40</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/ms.jpg" alt=""></a>
+						<p><a href="#">海信炫彩4k智能电视</a></p>
+						<p><i class="fa fa-rmb"></i>10.40</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/sm8.jpg" alt=""></a>
+						<p><a href="#">Hello Kitty果汁软糖芒果</a></p>
+						<p><i class="fa fa-rmb"></i>10.40</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 每日秒杀 结束 -->
+		<!-- 热卖推荐 开始 -->
+		<div class="recommend">
+			<h3>热门推荐<small>Hot & Recommend</small>
+			</h3>
+			<div class="recommends clearfix">
+				<ul class="recommen">
+					<li>
+						<a href="#"><img src="images/mimi.jpg" alt=""></a>
+						<p><a href="#">咪咪虾味条20g</a></p>
+						<p><i class="fa fa-rmb"></i>0.40</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/mm1.jpg" alt="" ></a>
+						<p><a href="#">嘉云牌混合水果味糖果200g</a></p>
+						<p><i class="fa fa-rmb"></i>14.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/mm2.jpg" alt=""></a>
+						<p><a href="#">索尼相机</a></p>
+						<p><i class="fa fa-rmb"></i>6000.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/mm3.jpg" alt=""></a>
+						<p><a href="#">上新啦100%正品高销量吸尘器</a></p>
+						<p><i class="fa fa-rmb"></i>580.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/mm4.jpg" alt=""></a>
+						<p><a href="#">飞利浦（PHILIPS）行车记录仪 ADR810</a></p>
+						<p><i class="fa fa-rmb"></i>729.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/mm6.jpg" alt=""></a>
+						<p><a href="#">云魔方 全覆盖3D软边抗紫光苹果6钢化膜 抗压防爆适用于苹果</a></p>
+						<p><i class="fa fa-rmb"></i>29.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/mm5.jpg" alt=""></a>
+						<p><a href="#">坚果智能高清 家用投影仪</a></p>
+						<p><i class="fa fa-rmb"></i>2900.00</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/mm7.jpg" alt=""></a>
+						<p><a href="#">清风 200张抽纸</a></p>
+						<p><i class="fa fa-rmb"></i>12.40</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 热卖推荐 结束 -->
+		<!-- 广告 开始 -->
+		<a href="#" class="gg1"><img src="images/gg1.jpg" alt=""></a>
+		<!-- 广告 结束 -->
+		<!-- 1f 饼干糕点cookies 开始 -->
+		<div class="pastry">
+			<h3>1F 饼干糕点</h3>
+			<ol class="pas">
+				<li class="cur">中式糕点</li>
+				<li>威化饼/蛋卷</li>
+				<li>饼干糕点</li>
+				<li>涂层饼干</li>
+			</ol>
+			<div class="pastrys clearfix">
+				<div class="left">
+					<a href="#"><img src="images/gdleft.jpg" alt=""></a>
+				</div>
+				<ul class="right ">
+					<li>
+						<a href="#"><img src="images/f11.jpg" alt=""></a>
+						<p><a href="#">可拉奥五谷元气原味谷物酥性饼</a></p>
+						<p><i class="fa fa-rmb"></i>3.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f12.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">百草味-麻薯</a></p>
+						<p><i class="fa fa-rmb"></i>26.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f13.jpg" alt=""></a>
+						<p><a href="#">美可法式薄饼柠檬味88g</a></p>
+						<p><i class="fa fa-rmb"></i>3.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f14.jpg" alt=""></a>
+						<p><a href="#">美可法式薄饼水蜜桃味88g</a></p>
+						<p><i class="fa fa-rmb"></i>3.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f15.jpg" alt=""></a>
+						<p><a href="#">美可法式薄饼牛奶味88g</a></p>
+						<p><i class="fa fa-rmb"></i>3.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f16.jpg" alt=""></a>
+						<p><a href="#">美可法式薄饼草莓味88g</a></p>
+						<p><i class="fa fa-rmb"></i>3.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f17.jpg" alt=""></a>
+						<p><a href="#">美可法式薄饼原味88g</a></p>
+						<p><i class="fa fa-rmb"></i>3.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f18.jpg" alt=""></a>
+						<p><a href="#">嘉顿 香葱饼</a></p>
+						<p><i class="fa fa-rmb"></i>5.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/f21.jpg" alt=""></a>
+						<p><a href="#">莱家粒粒威化黑巧克力味125g</a></p>
+						<p><i class="fa fa-rmb"></i>17.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f22.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">莱家粒粒威化提拉米苏味110g</a></p>
+						<p><i class="fa fa-rmb"></i>16.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f23.jpg" alt=""></a>
+						<p><a href="#">莱家粒粒威化黑加仑味110g</a></p>
+						<p><i class="fa fa-rmb"></i>15.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f24.jpg" alt=""></a>
+						<p><a href="#">莱家粒粒威化卡布奇诺味110g</a></p>
+						<p><i class="fa fa-rmb"></i>16.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f25.jpg" alt=""></a>
+						<p><a href="#">莱家粒粒威化巧克力味125g</a></p>
+						<p><i class="fa fa-rmb"></i>16.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f26.jpg" alt=""></a>
+						<p><a href="#">南益巧克力口味威化饼干200g</a></p>
+						<p><i class="fa fa-rmb"></i>19.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f27.jpg" alt=""></a>
+						<p><a href="#">南益柠檬口味威化饼干200g</a></p>
+						<p><i class="fa fa-rmb"></i>11.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f28.jpg" alt=""></a>
+						<p><a href="#">南益柠檬口味威化饼干200g</a></p>
+						<p><i class="fa fa-rmb"></i>11.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right ">
+					<li>
+						<a href="#"><img src="images/f31.jpg" alt=""></a>
+						<p><a href="#">丽芝士纳宝帝奶酪威化饼干</a></p>
+						<p><i class="fa fa-rmb"></i>6.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f32.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">丽芝士雅嘉奶酪味夹心玉米棒</a></p>
+						<p><i class="fa fa-rmb"></i>18.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f33.jpg" alt=""></a>
+						<p><a href="#">丽芝士芝心棒夹心卷(注心饼</a></p>
+						<p><i class="fa fa-rmb"></i>9.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f34.jpg" alt=""></a>
+						<p><a href="#">AJI尼西亚惊奇饼起士味</a></p>
+						<p><i class="fa fa-rmb"></i>9.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f39.jpg" alt=""></a>
+						<p><a href="#">陶陶居 莲蓉蛋黄酥广东榴莲味</a></p>
+						<p><i class="fa fa-rmb"></i>29.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f36.jpg" alt=""></a>
+						<p><a href="#">丹麦蓝罐曲奇原装进口</a></p>
+						<p><i class="fa fa-rmb"></i>218.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f37.jpg" alt=""></a>
+						<p><a href="#">猴菇曲奇饼</a></p>
+						<p><i class="fa fa-rmb"></i>35.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f38.jpg" alt=""></a>
+						<p><a href="#">知味观 软心曲奇饼干</a></p>
+						<p><i class="fa fa-rmb"></i>75.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right ">
+					<li>
+						<a href="#"><img src="images/f41.jpg" alt=""></a>
+						<p><a href="#">乐天扁桃仁巧克力32g</a></p>
+						<p><i class="fa fa-rmb"></i>9.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f42.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">格力高慕思百奇浓郁抹茶饼干</a></p>
+						<p><i class="fa fa-rmb"></i>24.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f43.jpg" alt=""></a>
+						<p><a href="#">格力高夹芯巧克力饼干</a></p>
+						<p><i class="fa fa-rmb"></i>5.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f44.jpg" alt=""></a>
+						<p><a href="#">【真巧】涂层饼干</a></p>
+						<p><i class="fa fa-rmb"></i>3.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f45.jpg" alt=""></a>
+						<p><a href="#">甜甜乐星球杯巧克力饼干（大</a></p>
+						<p><i class="fa fa-rmb"></i>14.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f46.jpg" alt=""></a>
+						<p><a href="#">芭米手工牛扎饼奶盐味148g</a></p>
+						<p><i class="fa fa-rmb"></i>8.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f47.jpg" alt=""></a>
+						<p><a href="#">马奇新新力士巧克力涂层夹芯饼</a></p>
+						<p><i class="fa fa-rmb"></i>16.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/f48.jpg" alt=""></a>
+						<p><a href="#">格力高百醇红酒巧克力味48g</a></p>
+						<p><i class="fa fa-rmb"></i>5.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 1f 饼干糕点 结束 -->
+		<!-- 2f 肉类制品 开始 -->
+		<div class="meat">
+			<h3><a href="">2F 肉类制品</a></h3>
+			<ol class="pas">
+				<li class="cur">鸡肉制品</li>
+				<li>牛肉制品</li>
+				<li>猪肉制品</li>
+			</ol>
+			<div class="meats clearfix">
+				<div class="left">
+					<a href="#"><img src="images/niuleft.jpg" alt=""></a>
+				</div>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/j1.jpg" alt=""></a>
+						<p><a href="#">有友山椒泡凤爪80g</a></p>
+						<p><i class="fa fa-rmb"></i>3.40</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">啃馋你酱烤原味小鸡腿42g</a></p>
+						<p><i class="fa fa-rmb"></i>3.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j3.jpg" alt=""></a>
+						<p><a href="#">啃馋你酱烧原味鸭翅56g</a></p>
+						<p><i class="fa fa-rmb"></i>4.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j4.jpg" alt=""></a>
+						<p><a href="#">寿都密码 农家土鸡肉熟食 茅山传统风味</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j5.jpg" alt=""></a>
+						<p><a href="#">传统风味豆干 原汁鸡肉味200g </a></p>
+						<p><i class="fa fa-rmb"></i>9.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j6.jpg" alt=""></a>
+						<p><a href="#">南京桂花烧鸡490g 卤味熟食 南京特产 手撕鸡肉零食色泽金黄诱人，肉质</a></p>
+						<p><i class="fa fa-rmb"></i>26.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j7.jpg" alt=""></a>
+						<p><a href="#">南农苏鸡 农家鸡 手撕鸡 烧鸡升级版 “四非”工艺南京特产 酱卤熟食 年货</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j8.jpg" alt=""></a>
+						<p><a href="#">【中华特色馆】三珍斋 叫花鸡400g 烧鸡卤味乌镇特产卤菜真空酱鸡烤鸡</a></p>
+						<p><i class="fa fa-rmb"></i>29.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/n1.jpg" alt=""></a>
+						<p><a href="#">牛浪汉麻辣牛肉60g</a></p>
+						<p><i class="fa fa-rmb"></i>6.20</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">牛浪汉泡椒牛肉60g</a></p>
+						<p><i class="fa fa-rmb"></i>6.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n3.jpg" alt=""></a>
+						<p><a href="#">母亲牛肉棒辣味22g</a></p>
+						<p><i class="fa fa-rmb"></i>5.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n4.jpg" alt=""></a>
+						<p><a href="#">Kang’s牛肉干黑椒味80g</a></p>
+						<p><i class="fa fa-rmb"></i>13.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n5.jpg" alt=""></a>
+						<p><a href="#">棒棒娃天府火爆麻辣牛肉四川特产166g休闲零食肉制品  </a></p>
+						<p><i class="fa fa-rmb"></i>15.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n6.jpg" alt=""></a>
+						<p><a href="#">棒棒娃灯影牛肉丝(香辣味)150g休闲零食肉制品 好吃</a></p>
+						<p><i class="fa fa-rmb"></i>19.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n7.jpg" alt=""></a>
+						<p><a href="#">【百草味-精制猪肉脯200gx2袋】靖江肉干肉铺 零食特产小吃 甜</a></p>
+						<p><i class="fa fa-rmb"></i>37.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n8.jpg" alt=""></a>
+						<p><a href="#">大漠头羊西域枸杞牛肉218g*1新疆特产真空装熟食卤制品畜肉清真新品上</a></p>
+						<p><i class="fa fa-rmb"></i>28.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 2f 肉类制品 结束 -->
+		<!-- 3f 数码电器digital 开始 -->
+		<div class="digital">
+			<h3><a href="">3F 数码电器</a></h3>
+			<ol class="pas">
+				<li class="cur">手机</li>
+				<li>家电</li>
+				<li>数码</li>
+			</ol>
+			<div class="digitals clearfix">
+				<div class="left">
+					<a href="#"><img src="images/f3.jpg" alt=""></a>
+				</div>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/sj1.jpg" alt=""></a>
+						<p><a href="#">Apple iPhone 5s 16GB(金) 双4G(公开)</a></p>
+						<p><i class="fa fa-rmb"></i>2188.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<div class="div">
+							<a href="#"><img src="images/x1-1.jpg" alt="" width="140px" height="140px"></a>
+							<p><a href="#">Apple iPhone 7 128GB 亮黑色 移动联通电信4G手机</a></p>
+							<p><i class="fa fa-rmb"></i>5898.00</p>
+							<div class="over">
+								<a href="#">加入购物车</a>
+								<a href="#">对比</a>
+							</div>
+						</div>
+						<ol class="narrow">
+							<li class="cur"><img src="images/x1.jpg" alt=""></li>
+							<li><img src="images/x2.jpg" alt=""></li>
+							<li><img src="images/x3.jpg" alt=""></li>
+							<li><img src="images/x4.jpg" alt=""></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#"><img src="images/sj3.jpg" alt=""></a>
+						<p><a href="#">纽曼 T1111 移动/联通2G 直板大屏老人手机 大字大声老年手机 </a></p>
+						<p><i class="fa fa-rmb"></i>99.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/sj4.jpg" alt=""></a>
+						<p><a href="#">OPPO R9s Plus 全网通4G手机</a></p>
+						<p><i class="fa fa-rmb"></i>1199.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/sj5.jpg" alt=""></a>
+						<p><a href="#">魅族 魅蓝Note5 全网通公开版 32GB 月光银 移动联通电信4G手机 双卡双dai </a></p>
+						<p><i class="fa fa-rmb"></i>1298.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<div class="div">
+							<a href="#"><img src="images/x1-1.jpg" alt="" width="140px" height="140px"></a>
+							<p><a href="#">Apple iPhone 7 128GB 亮黑色 移动联通电信4G手机</a></p>
+							<p><i class="fa fa-rmb"></i>5898.00</p>
+							<div class="over">
+								<a href="#">加入购物车</a>
+								<a href="#">对比</a>
+							</div>
+						</div>
+						<ol class="narrow">
+							<li class="cur"><img src="images/x1.jpg" alt=""></li>
+							<li><img src="images/x2.jpg" alt=""></li>
+							<li><img src="images/x3.jpg" alt=""></li>
+							<li><img src="images/x4.jpg" alt=""></li>
+						</ol>
+					</li>
+					<li>
+						<a href="#"><img src="images/sj7.jpg" alt=""></a>
+						<p><a href="#">vivo X9Plus 64G全网通 金色双卡双待 拍照手机</a></p>
+						<p><i class="fa fa-rmb"></i>3498.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/sj8.jpg" alt=""></a>
+						<p><a href="#">华为 Mate9 4GB+64GB 全网通版（香槟金）</a></p>
+						<p><i class="fa fa-rmb"></i>4068.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/n1.jpg" alt=""></a>
+						<p><a href="#">牛浪汉麻辣牛肉60g</a></p>
+						<p><i class="fa fa-rmb"></i>6.20</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">牛浪汉泡椒牛肉60g</a></p>
+						<p><i class="fa fa-rmb"></i>6.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n3.jpg" alt=""></a>
+						<p><a href="#">母亲牛肉棒辣味22g</a></p>
+						<p><i class="fa fa-rmb"></i>5.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n4.jpg" alt=""></a>
+						<p><a href="#">Kang’s牛肉干黑椒味80g</a></p>
+						<p><i class="fa fa-rmb"></i>13.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n5.jpg" alt=""></a>
+						<p><a href="#">棒棒娃天府火爆麻辣牛肉四川特产166g休闲零食肉制品  </a></p>
+						<p><i class="fa fa-rmb"></i>15.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n6.jpg" alt=""></a>
+						<p><a href="#">棒棒娃灯影牛肉丝(香辣味)150g休闲零食肉制品 好吃</a></p>
+						<p><i class="fa fa-rmb"></i>19.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n7.jpg" alt=""></a>
+						<p><a href="#">【百草味-精制猪肉脯200gx2袋】靖江肉干肉铺 零食特产小吃 甜</a></p>
+						<p><i class="fa fa-rmb"></i>37.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n8.jpg" alt=""></a>
+						<p><a href="#">大漠头羊西域枸杞牛肉218g*1新疆特产真空装熟食卤制品畜肉清真新品上</a></p>
+						<p><i class="fa fa-rmb"></i>28.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 3f 数码电器 结束 -->
+		<!-- 4f 母婴 玩具 开始-->
+		<div class="meat">
+			<h3><a href="">4F 母婴 玩具</a></h3>
+			<ol class="pas">
+				<li class="cur">孕婴奶粉</li>
+				<li>尿裤湿巾</li>
+				<li>喂养用品</li>
+				<li>儿童玩具</li>
+			</ol>
+			<div class="meats clearfix">
+				<div class="left">
+					<a href="#"><img src="images/niuleft.jpg" alt=""></a>
+				</div>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/j1.jpg" alt=""></a>
+						<p><a href="#">有友山椒泡凤爪80g</a></p>
+						<p><i class="fa fa-rmb"></i>3.40</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">啃馋你酱烤原味小鸡腿42g</a></p>
+						<p><i class="fa fa-rmb"></i>3.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j3.jpg" alt=""></a>
+						<p><a href="#">啃馋你酱烧原味鸭翅56g</a></p>
+						<p><i class="fa fa-rmb"></i>4.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j4.jpg" alt=""></a>
+						<p><a href="#">寿都密码 农家土鸡肉熟食 茅山传统风味</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j5.jpg" alt=""></a>
+						<p><a href="#">传统风味豆干 原汁鸡肉味200g </a></p>
+						<p><i class="fa fa-rmb"></i>9.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j6.jpg" alt=""></a>
+						<p><a href="#">南京桂花烧鸡490g 卤味熟食 南京特产 手撕鸡肉零食色泽金黄诱人，肉质</a></p>
+						<p><i class="fa fa-rmb"></i>26.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j7.jpg" alt=""></a>
+						<p><a href="#">南农苏鸡 农家鸡 手撕鸡 烧鸡升级版 “四非”工艺南京特产 酱卤熟食 年货</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j8.jpg" alt=""></a>
+						<p><a href="#">【中华特色馆】三珍斋 叫花鸡400g 烧鸡卤味乌镇特产卤菜真空酱鸡烤鸡</a></p>
+						<p><i class="fa fa-rmb"></i>29.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/n1.jpg" alt=""></a>
+						<p><a href="#">牛浪汉麻辣牛肉60g</a></p>
+						<p><i class="fa fa-rmb"></i>6.20</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">牛浪汉泡椒牛肉60g</a></p>
+						<p><i class="fa fa-rmb"></i>6.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n3.jpg" alt=""></a>
+						<p><a href="#">母亲牛肉棒辣味22g</a></p>
+						<p><i class="fa fa-rmb"></i>5.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n4.jpg" alt=""></a>
+						<p><a href="#">Kang’s牛肉干黑椒味80g</a></p>
+						<p><i class="fa fa-rmb"></i>13.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n5.jpg" alt=""></a>
+						<p><a href="#">棒棒娃天府火爆麻辣牛肉四川特产166g休闲零食肉制品  </a></p>
+						<p><i class="fa fa-rmb"></i>15.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n6.jpg" alt=""></a>
+						<p><a href="#">棒棒娃灯影牛肉丝(香辣味)150g休闲零食肉制品 好吃</a></p>
+						<p><i class="fa fa-rmb"></i>19.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n7.jpg" alt=""></a>
+						<p><a href="#">【百草味-精制猪肉脯200gx2袋】靖江肉干肉铺 零食特产小吃 甜</a></p>
+						<p><i class="fa fa-rmb"></i>37.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n8.jpg" alt=""></a>
+						<p><a href="#">大漠头羊西域枸杞牛肉218g*1新疆特产真空装熟食卤制品畜肉清真新品上</a></p>
+						<p><i class="fa fa-rmb"></i>28.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 4f 母婴 玩具 结束-->
+		<!-- 5f 运动服饰 开始-->
+		<div class="meat">
+			<h3><a href="">5F 运动服饰</a></h3>
+			<ol class="pas">
+				<li class="cur">当季流行</li>
+				<li>特色服饰</li>
+				<li>浪漫裙装</li>
+				<li>袜子配饰</li>
+			</ol>
+			<div class="meats clearfix">
+				<div class="left">
+					<a href="#"><img src="images/niuleft.jpg" alt=""></a>
+				</div>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/j1.jpg" alt=""></a>
+						<p><a href="#">有友山椒泡凤爪80g</a></p>
+						<p><i class="fa fa-rmb"></i>3.40</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">啃馋你酱烤原味小鸡腿42g</a></p>
+						<p><i class="fa fa-rmb"></i>3.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j3.jpg" alt=""></a>
+						<p><a href="#">啃馋你酱烧原味鸭翅56g</a></p>
+						<p><i class="fa fa-rmb"></i>4.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j4.jpg" alt=""></a>
+						<p><a href="#">寿都密码 农家土鸡肉熟食 茅山传统风味</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j5.jpg" alt=""></a>
+						<p><a href="#">传统风味豆干 原汁鸡肉味200g </a></p>
+						<p><i class="fa fa-rmb"></i>9.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j6.jpg" alt=""></a>
+						<p><a href="#">南京桂花烧鸡490g 卤味熟食 南京特产 手撕鸡肉零食色泽金黄诱人，肉质</a></p>
+						<p><i class="fa fa-rmb"></i>26.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j7.jpg" alt=""></a>
+						<p><a href="#">南农苏鸡 农家鸡 手撕鸡 烧鸡升级版 “四非”工艺南京特产 酱卤熟食 年货</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/j8.jpg" alt=""></a>
+						<p><a href="#">【中华特色馆】三珍斋 叫花鸡400g 烧鸡卤味乌镇特产卤菜真空酱鸡烤鸡</a></p>
+						<p><i class="fa fa-rmb"></i>29.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/n1.jpg" alt=""></a>
+						<p><a href="#">牛浪汉麻辣牛肉60g</a></p>
+						<p><i class="fa fa-rmb"></i>6.20</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">牛浪汉泡椒牛肉60g</a></p>
+						<p><i class="fa fa-rmb"></i>6.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n3.jpg" alt=""></a>
+						<p><a href="#">母亲牛肉棒辣味22g</a></p>
+						<p><i class="fa fa-rmb"></i>5.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n4.jpg" alt=""></a>
+						<p><a href="#">Kang’s牛肉干黑椒味80g</a></p>
+						<p><i class="fa fa-rmb"></i>13.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n5.jpg" alt=""></a>
+						<p><a href="#">棒棒娃天府火爆麻辣牛肉四川特产166g休闲零食肉制品  </a></p>
+						<p><i class="fa fa-rmb"></i>15.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n6.jpg" alt=""></a>
+						<p><a href="#">棒棒娃灯影牛肉丝(香辣味)150g休闲零食肉制品 好吃</a></p>
+						<p><i class="fa fa-rmb"></i>19.50</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n7.jpg" alt=""></a>
+						<p><a href="#">【百草味-精制猪肉脯200gx2袋】靖江肉干肉铺 零食特产小吃 甜</a></p>
+						<p><i class="fa fa-rmb"></i>37.80</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/n8.jpg" alt=""></a>
+						<p><a href="#">大漠头羊西域枸杞牛肉218g*1新疆特产真空装熟食卤制品畜肉清真新品上</a></p>
+						<p><i class="fa fa-rmb"></i>28.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 5f 运动服饰 结束-->
+		<!-- 6f 汽车用品/服务 开始-->
+		<div class="meat">
+			<h3><a href="">6F 汽车用品/服务</a></h3>
+			<ol class="pas">
+				<li class="cur">汽车生活</li>
+				<li>车载电器</li>
+				<li>汽车用品</li>
+				<li>汽车服务</li>
+			</ol>
+			<div class="meats clearfix">
+				<div class="left">
+					<a href="#"><img src="images/niuleft.jpg" alt=""></a>
+				</div>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 6f 汽车用品/服务 结束-->
+		<!-- 7f 纸品/清洁 开始-->
+		<div class="meat">
+			<h3><a href="">7F 纸品/清洁</a></h3>
+			<ol class="pas">
+				<li class="cur">生活用纸</li>
+				<li>清洁洗护</li>
+				<li>身体护理</li>
+			</ol>
+			<div class="meats clearfix">
+				<div class="left">
+					<a href="#"><img src="images/niuleft.jpg" alt=""></a>
+				</div>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 7f 纸品/清洁 结束-->
+		<!-- 8f 无人机/机器人 开始-->
+		<div class="meat">
+			<h3><a href="">8F 无人机/机器人</a></h3>
+			<ol class="pas">
+				<li class="cur">智能机器人</li>
+				<li>车在机器人</li>
+				<li>清洁机器人</li>
+				<li>无人机</li>
+			</ol>
+			<div class="meats clearfix">
+				<div class="left">
+					<a href="#"><img src="images/niuleft.jpg" alt=""></a>
+				</div>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<a href="#"><img src="images/z1.jpg" alt=""></a>
+						<p><a href="#">老山合 猪肉脯250g /烘烤熟肉干/潮汕特产/伴粥伴</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z2.jpg" alt="" width="140px" height="140px"></a>
+						<p><a href="#">寿都密码 江苏如皋火腿猪肉礼盒1.6kg </a></p>
+						<p><i class="fa fa-rmb"></i>258.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z3.jpg" alt=""></a>
+						<p><a href="#">立丰猪肉枣150g休闲零食肉制品 香香猪，猪腿肉</a></p>
+						<p><i class="fa fa-rmb"></i>23.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z4.jpg" alt=""></a>
+						<p><a href="#">【百草味-金钱肉120gx2袋】猪肉干肉脯干 肉脯肉类零</a></p>
+						<p><i class="fa fa-rmb"></i>150.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z5.jpg" alt=""></a>
+						<p><a href="#">【淘豆_原味猪肉脯250g】烘烤猪肉干特产肉脯休闲零食品 </a></p>
+						<p><i class="fa fa-rmb"></i>16.60</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z6.jpg" alt=""></a>
+						<p><a href="#">【三只松鼠_猪肉猪肉脯210g】休闲食品零食小吃靖江特</a></p>
+						<p><i class="fa fa-rmb"></i>19.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z7.jpg" alt=""></a>
+						<p><a href="#">【双鱼猪肉脯】靖江特产 双鱼牌猪肉脯休闲零食猪肉干</a></p>
+						<p><i class="fa fa-rmb"></i>40.00</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="images/z8.jpg" alt=""></a>
+						<p><a href="#">【双鱼礼盒】靖江特产 双鱼牌 猪肉脯干年货礼盒草堂香</a></p>
+						<p><i class="fa fa-rmb"></i>129.90</p>
+						<div class="over">
+							<a href="#">加入购物车</a>
+							<a href="#">对比</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		<!-- 8f 无人机/机器人 结束-->
+		</div>
+		<!-- 品牌推荐 开始 -->
+		<div class="hot">
+			<h3>品牌推荐</h3>
+			<ul class="hots clearfix">
+				<li class="nine"><a href="#"><img src="images/pinpai/a1.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a2.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a3.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a4.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a5.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a6.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a7.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a8.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a9.jpg" alt=""></a></li>
+				<li class="nine"><a href="#"><img src="images/pinpai/a10.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a11.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a12.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a13.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a14.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a15.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a16.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a17.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/pinpai/a18.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<!-- 品牌推荐 结束 -->
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 脚步 开始 -->
+	<div class="foote common">
+		<div class="tiao"></div>
+		<div><img src="images/pinpai/service.png"  alt=""></div>
+		<div class="foote-top clearfix">
+			<q>
+				<ul>
+					<h4>新手指南</h4>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">找回密码</a></li>
+					<li><a href="#">会员注册</a></li>
+					<li><a href="#">积分制度</a></li>
+				</ul>
+			</q>
+			<q>
+				<ul>
+					<h4>付款说明</h4>
+					<li><a href="#">商品发票</a></li>
+					<li><a href="#">办理退款</a></li>
+					<li><a href="#">支付方式</a></li>
+				</ul>
+			</q>
+			<q>
+				<ul>
+					<h4>配送说明</h4>
+					<li><a href="#">配送运费</a></li>
+					<li><a href="#">配送时间</a></li>
+				</ul>
+			</q>
+			<q>
+				<ul>
+					<h4>客户服务</h4>
+					<li><a href="#">订单速查</a></li>
+					<li><a href="#">代金券</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+			</q>
+			<q>
+				<div class="APP">
+					<p>下载麦露app</p>
+					<img src="images/weixin.jpg" alt="">
+					<p>一切尽在手中！</p>
+				</div>
+				<div class="WEIXIN">
+					<p>下载麦露app</p>
+					<img src="images/weixin.jpg" alt="">
+					<p>一切尽在手中！</p>
+				</div>
+			</q>
+			<q class="clearfix">
+				<div class="app">
+					<b>
+						<i class="fa fa-"></i>
+						客服热线：<span>400-800-0804</span><br>			
+						<small>周一至周五 8:30-18:00</small>
+					</b>
+				</div>
+				<div class="app">
+					<b>
+						<i class="fa fa-"></i>
+						招商热线：<span>400-960-0814</span><br>
+						<small>周一至周五 8:00-17:00</small>
+					</b>
+				</div>
+			</q>
+		</div>
+		<div class="tiao"></div>
+		<ol class="link clearfix">
+			<i class="fa fa-angle-down"></i>
+			<li><h4>友情链接:</h4></li>
+			<li><a href="#">美食网</a></li>
+			<li><a href="#">巴黎商城</a></li>
+			<li><a href="#">杂志</a></li>
+			<li><a href="#">零食</a></li>
+			<li><a href="#">茶叶</a></li>
+			<li><a href="#">优购物</a></li>
+			<li><a href="#">名酒招商网</a></li>
+			<li><a href="#">村村通商城</a></li>
+			<li><a href="#">好吃的零食</a></li>
+			<li><a href="#">购物搜索</a></li>
+			<li><a href="#">礼品</a></li>
+			<li><a href="#">服装装批发</a></li>
+			<li><a href="#">有福照片书</a></li>
+			<li><a href="#">加盟网</a></li>
+			<li><a href="#">赶圩网</a></li>
+			<li><a href="#">盖网商城</a></li>
+			<li><a href="#">嗨淘化妆品</a></li>
+			<li><a href="#">悠牛网</a></li>
+			<li><a href="#">健康宝贝网</a></li>
+			<li><a href="#">育儿</a></li>
+			<li><a href="#">在线招商</a></li>
+			<li><a href="#">日本代购</a></li>
+			<li><a href="#">关于我们</a></li>
+			<li><a href="#">我们的团队</a></li>
+			<li><a href="#">热门搜索</a></li>
+			<li><a href="#">友情链接</a></li>
+			<li><a href="#">诚征英才</a></li>
+			<li><a href="#">放心搜</a></li>
+			<li><a href="#">开放平台</a></li>
+			<li><a href="#">网站联盟</a></li>
+			<li><a href="#">诚聘</a></li>
+			<li><a href="#">媒体报道</a></li>
+			<li><a href="#">隐私条款</a></li>
+			<li><a href="#">365爱心基金</a></li>
+			<li><a href="#">唯品地图</a></li>
+			<li><a href="#">品牌大全</a></li>
+			<li><a href="#">生日礼物</a></li>
+			<li><a href="#">三九网</a></li>
+			<li><a href="#">汕头团购</a></li>
+			<li><a href="#">快递查询</a></li>
+			<li><a href="#">法律申明</a></li>
+			<li><a href="#">用户体验提升计划</a></li>
+			<li><a href="#">服务协议</a></li>
+			<li><a href="#">北京去114</a></li>
+		</ol>
+		<ul class="a clearfix">
+			<li><a href="#">关于我们</a> |</li>
+			<li><a href="#">联系我们</a> |</li>
+			<li><a href="#">网站地图</a> |</li>
+			<li><a href="#">友情链接</a></li>   
+		</ul>
+		<div class="scba">
+			<a href="#"><img src="images/pinpai/scoba.jpg" alt=""></a>
+			<a href="#"><img src="images/pinpai/cxds.jpg" alt=""></a>
+			<a href="#"><img src="images/pinpai/weiquan.jpg" alt=""></a>
+			<a href="#"><img src="images/pinpai/weiquan_2.jpg" alt=""></a>
+		</div>
+		<div class="wei">
+			<p>粤公网安备 44010302000159号 粤ICP备10229181号 许可证：粤B2-20110008</p>
+			<p>Copyright ©麦露商城 2009 - 2015, All Rights Reserved</p>
+			<p>本网站直接或间接向消费者推销商品或者服务的商业宣传均属于“广告”（包装及参数、售后保障等商品信息除外）</p>
+			<p>联系电话：0755-61898999</p>
+			<p>自营主体的营业执照及食品流通许可证信息</p>
+		</div>
+	</div>
+	<!-- 脚部 结束 -->
+		<div class="float">
+			<ul>
+				<li><a href="#">购物袋<b>0</b></a></li>
+				<li><a href="#">联系客服</a></li>
+				<li><a href="#">投诉</a></li>
+				<li><a href="#">意见</a></li>
+			</ul>
+		</div>
+	<!-- 右边 开始 -->
+
+</body>
+</html>
+<script src="jquery1.12.4.min.js"></script>
+<script src="page.js"></script>
+<script src="jquery.color.min.js"></script>
+<script src="jquery.transit.min.js"></script>
+<script src="movie.min.js"></script>
+<script src="tab.js"></script>
+<script src="js.js"></script>

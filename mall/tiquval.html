@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<style>
+	.remove,.quxiao,input{
+/*		width:30px;
+		height:20px;
+		float:left;*/
+		display:none;
+	}
+</style>
+<body>
+    <ul>
+    	<li>
+    		<div class="piliang"><p>批量</p></div>
+    		<div href="#" class="remove">删除</div>
+			<ul class="nav">
+				<li><a href="#"><input type="checkbox"><p>4646546464</p></a></li>
+				<li><a href="#"><input type="checkbox"><p>4646546464</p></a></li>
+				<li><a href="#"><input type="checkbox"><p>4646546464</p></a></li>
+				<li><a href="#"><input type="checkbox"><p>4646546464</p></a></li>
+				<li><a href="#"><input type="checkbox"><p>4646546464</p></a></li>
+			</ul>
+			<div href="#" class="quxiao">取消</div>
+    	</li>
+    </ul>
+</body>
+</html>
+<script src="jquery1.12.4.min.js"></script>
+<script>
+$(".piliang").click(function(event) {
+	$(this).hide();
+	$(".remove").show();
+	$(".quxiao").show();
+	$("input").show();
+	$(".nav a").wrapInner('<label/>').find("label").unwrap();
+
+});
+$(".quxiao").click(function(event) {
+	$(this).hide();
+	$(".remove").hide();
+	$(".piliang").show();
+	$(".nav label").wrapInner('a').find("a").unwrap();
+});
+$(".remove").click(function(event) {
+	if(!confirm("是否删除?")) return false;
+	$(".nav :checked").closest('li').slideUp(function(){
+		$(this).remove();
+	});
+});
+</script>
