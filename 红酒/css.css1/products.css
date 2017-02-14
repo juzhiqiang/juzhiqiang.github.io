@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-13 11:39:43
+ * @version $Id$
+ */
+.products{
+	padding:80px 0;
+}
+.products h1{
+	text-align:center;
+	font-size:48px;
+	color:rgb(142, 0, 0);
+	margin-bottom:72px;
+}
+.products a{
+	display:block;
+	overflow:hidden;
+}
+.products img{
+	transform:scale(1);
+	transition:2s;
+}
+.products img:hover{
+	transform:scale(1.2);
+}
+.products h2{
+	font-size:24px;
+	line-height:26px;
+	color:rgb(145, 12, 17);
+	margin:12px 0 7px 0;
+}
+.products p{
+	color:rgb(153, 153, 153);
+	font-size:16px;
+	line-height:29px;
+}
+.sit{
+	margin-bottom:20px;
+}
+@media screen and (max-width:1220px){
+	.products{
+		padding:50px 0;
+	}
+	.products h1{
+		margin-bottom:42px;
+	}
+}
+@media screen and (max-width:466px){
+	.sit{
+		width:100% !important;
+	}
+	.products img{
+		width:100%;
+	}
+}

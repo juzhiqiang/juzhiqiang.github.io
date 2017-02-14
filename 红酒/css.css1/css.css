@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-09 17:21:26
+ * @version $Id$
+ */
+@font-face {
+  font-family: 'ROBOTO';
+  src: url("dist/fonts/ROBOTO-REGULAR.TTF") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RopaSans';
+  src: url("dist/fonts/RopaSans-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+	font-family:"Roboto",sans-serif;
+}
+body{
+	min-width:320px;
+}
+header.clearfix{
+	background-color:#eae089;
+	min-height:740px;
+}
+.container .container-fluid{
+	padding:0 0 1.5em ;
+	background-color:#eae089;
+	position:relative;
+	max-width:100%;
+}
+.clearfix .navbar{
+	border:none;
+}
+#logo{
+	font-size:50px;
+	color:#8E0000;
+	line-height:55px;
+	font-weight:bold;
+	font-family: 'RopaSans-Regular';
+}
+#daohang{
+	width:75%;
+	float:right;
+}
+#daohang ul{
+	float:left !important;
+	width:80%;
+}
+#daohang li{
+	width:16.66%;
+	text-align:center;
+	padding:15px 0;
+}
+.active a,#daohang li a:hover{
+	transition:.5s;
+	padding:15px 0 8px 0;
+	border-bottom:2px solid #8E0000;
+}
+#daohang li a{
+	padding:15px 0 8px 0;
+	display:inline-block;
+	font-size:16px;	
+	color:#000;
+	background-color:#eae089;
+}
+ .search *{
+ 	display:inline-block;
+ }
+ .form-group{
+ 	position:absolute;
+ 	right:10px;
+ 	top:35%;
+ 	border-radius:0;
+ }
+.form-group .form-control{
+	width:0;
+	padding:0;
+	border:none;
+	border-radius:0;
+	background-color: #8E0000;
+	color:#fff !important;
+}
+ .form-group{
+ 	z-index:1 ;
+ }
+.search{
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	position:absolute;
+	right:-35px;
+	top:50%;
+	margin-top:-20px;
+	background-color:#fff;
+	line-height:40px;
+	text-align:center;
+	cursor:pointer;
+}
+@media screen and (max-width:991px) {
+	#daohang ul{
+		width:100%;
+	}
+	#daohang li a{
+		font-size:14px;
+	}
+	.container-fluid > .navbar-collapse{
+		margin:0 !important;
+	}
+}
+@media screen and (max-width:767px){
+	.navbar-header{
+		position:relative;
+		text-align:center;
+	}
+	#logo{
+		line-height:20px;
+		float:left ;
+	}
+	.navbar .navbar-toggle{
+		float:none;
+		border:none;
+		padding-right:200px;
+	}
+	.clearfix .navbar .navbar-toggle .icon-bar{
+		background-color:#000;
+	}
+	.navbar-default .navbar-collapse{
+		border-color:#000 !important;
+	}
+	.clearfix .navbar-default .navbar-toggle:focus,
+	.clearfix .navbar-default .navbar-toggle:hover{
+		background-color:#eae089;
+	}
+	#daohang{
+		width:100%;
+	}
+	#daohang ul,#daohang ul li{
+		width:100%;
+		padding:0;
+	}
+	#daohang .active a,#daohang li a:hover{
+		transition:.5s;
+		padding:15px 0 8px 0;
+		border-bottom:0;
+		color:#8E0000;
+	}
+	.search{
+		position:absolute;
+		right:0px;
+		top:45px;
+	}
+	.form-group{
+	 	position:absolute;
+	 	right:45px;
+	 	top:28px;
+	 	border-radius:0;
+ 	}
+ 	.carousel-inner{
+ 		font-size:32px;
+ 	}
+}
+@media screen and (max-width:462px){
+	header.clearfix{
+		min-height:500px;
+	}
+	.navbar .navbar-toggle{
+		float:none;
+		border:none;
+		padding-right:60px;	
+	}
+	.carousel-inner img{
+		width:50%;
+	}
+
+}
+#carousel-id img{
+	margin:0 auto;
+}
+#carousel-id .carousel-caption,#carousel-id h1{
+	padding-top:0px ;
+	margin:0;
+	position:static ;
+	letter-spacing:0.1em;
+}
+#carousel-id h1{
+	color:#8E0000;
+	font-size:28px;
+	
+}
+.carousel-caption p{
+	padding-top:1.5em;
+	font-size:12px;
+	color:#000;
+}
+#carousel-id .carousel-indicators{
+	bottom:-10px;
+}
+#carousel-id .carousel-indicators li{
+	width:12px;
+	height:12px;
+	margin:0 3px;
+	background-color: #2a2017;
+	border:none;
+}
+#carousel-id .carousel-indicators .active{
+	background-color:red;
+}
+
+/*脚部*/
+footer.clearfix{
+	padding:5em 0 2em;
+	background:#32383C !important;
+	color:rgb(135, 138, 140);
+}
+footer h4{
+	font-size:28px;
+	line-height:30px;
+	margin:0 0 28px;
+	font-family:"RopaSans";
+	color:white;
+}
+footer ul{
+	list-style:none;
+}
+footer p{
+	font-size:15px;
+	line-height:27px;
+	margin:0;
+}
+footer li a{
+	color:rgb(135, 138, 140);
+	transition:.5s;
+}
+footer li a:hover,footer .fa:hover{
+	color:#fff;
+	text-decoration:none;
+}
+footer .fa{
+	transition:.5s;
+	font-size: 28px
+}
+footer .six a{
+	color:white;
+	transition:.5s;
+}
+footer .six a:hover{
+	color:rgb(135, 138, 140);
+	text-decoration:none;
+}
+footer .all{
+	padding:3em 0 0 ;
+	text-align:center;
+	font-size:16px;
+}
+footer .all a{
+	color:white;
+	transition:.5s;
+}
+footer .all a:hover{
+	color:rgb(135, 138, 140);
+	text-decoration:none;
+
+}
