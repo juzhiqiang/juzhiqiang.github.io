@@ -1,0 +1,266 @@
+@import "_css";
+body{
+	.bg-c(#2e271e);
+}
+.font("Myriad","MyriadPro-Bold.otf","opentype");
+//导航
+nav{
+	.bg-i("images/bj.png");
+	.h(image-height("images/bj.png"));
+	.mt(20px);
+	> ul{
+		.w(885px);
+		.ma();
+		> li{
+			.fl();
+			.t-c();
+			.p(2px,1px,2px,3px);
+			.bg(url("images/ps_03.jpg")left 4px no-repeat);
+			&:first-child{
+				.bg-i(none);
+			}
+			&:hover{
+				.p-r();
+				> a{
+					.bg(url("images/keng.png")center no-repeat);
+				}
+				ul{
+					.d-b();
+					.z(2);
+				}
+			}
+			> a{
+				.d-b();
+				.h(11px);
+				.p(9px,20px,15px,19px);
+				.r(5px);
+			}
+		}
+		ul{
+			.p-a();
+			.bg-c-a(#fff,.8);
+			.w(94%);
+			.lt(3.5%,39px);
+			.r(0,0,5px,5px);
+			.o();
+			.d-n();
+			li{
+				.line(34px);
+				.bd-t(1px solid #c3c5c0);
+				.bd-b(1px solid #eff2ed);
+				.size(12px);
+				&:last-child{
+					.bd-b(0);
+				}
+				&:hover{
+					.bg-c(#bfcacc);
+				}
+			}
+			a{
+				.c(#4a4a4a);
+			}
+		}
+	}
+}
+//ppt
+.banner{
+	.bg(url("images/banbg.jpg") center no-repeat);
+	@size:image-width("images/banbg.jpg");
+	.maxw(@size);
+	.wh(image-size("images/banbg.jpg"));
+	.ml((900px - extract(@size,1)) / 2);
+	.p-r();
+	.z(1);
+	&:after{
+		.cnt();
+		.p-a();
+		.full();
+		.bg(url("images/bancover.png") center no-repeat);
+		.lt();
+		.z(1);
+	}
+	ul{
+		.wh(849px,251px);
+		.p-r();
+		.lt(90px,60px);
+		.o();
+	}
+	li{
+		.full();
+		.p-a();
+		.lt();
+		img{
+			.w(100%);
+		}
+	}
+	.arrow{
+		.p-a();
+		.t(165px);
+		.c-p();
+		.z(2);
+		&.prev{
+			.l(46px);
+		};
+		&.next{
+			.r(46px);
+		};
+	}
+}
+// 主体
+main{
+	.bg-i("images/mainbg.jpg");
+	.bg-p(top center);
+	.size(14px);
+	.c(#eae5d8);
+	.clearfix{
+		.wh(440px,481px);
+		.bg(url("images/Eco.png") no-repeat);
+		.c(white);
+		.fl()!important;
+		.to{
+			.fl();
+			.mt(90px);
+			.p-r();
+			p{	
+				.wh(110px,147px);
+				.bg-c(white);
+				img{
+					.wh(95%);
+					.m(4px 0 0 3px);
+				}
+				&:last-child{
+					.p-a();
+					.lt(-6px,-5px);
+					.rotate(-10);
+					.bsd(0,0,5px,black)
+				}
+			}
+		}
+		.to-right{
+			.w(280px);
+			.fr();
+			.m(125px 10px 0 0);
+			a{
+				.bg(url("images/as.png") no-repeat);
+				.d-b();
+				.mt(10px);
+				.wh(110px,28px);
+				.line(26px);
+				.t-c();
+				.c(white);
+				.transition(1s);
+				&:hover{
+					.c(red);
+				}
+			}
+		}
+		.movers{
+			.fl();
+			.p-r();
+		}
+		.mover{
+			.wh(380px,118px);
+			.bg-c(#332b20);
+			.mt(30px);
+			.o();
+			clear:both;
+			.bao{
+				.h(118px);
+				.pl(9px);
+				a{
+					.d-i-b();
+					.wh(98px,98px);
+					.p(12px 11px 8px);
+				}
+				
+			}
+		}
+		.prev,.next{
+			.wh(20px);
+			.p-a();
+		}
+		.prev{
+			.lt(-22px,45%);
+		}
+		.next{
+			.rt(5px,45%)
+		}
+		>a{
+			.wh(100px,25px);
+			.fr();
+			.d-b();
+			.size(12px);
+			.c(#ffd98d);
+			.bg-c(#584020);
+			.r(5px);
+			.line(25px);
+			.t-c();
+			.m(14px,60px, 0, 0)
+		}
+	}
+	.china{
+		.fr();
+		.size(13px);
+		.w(425px);
+		a{
+			.d-i-b();
+			.wh(120px,25px);
+			.size(12px);
+			.c(#ffd98d);
+			.bg-c(#584020);
+			.r(5px);
+			.line(25px);
+			.t-c();
+			.m(20px,10px,20px,0);
+		}
+		.left-top a{
+			.m(10px,10px,20px,0);
+			
+		}
+	}
+}
+// 脚部
+.footh{
+	.bg-c(#292219);
+	.top{
+		.t-c();
+		.pt(15px);
+	}
+	.input{
+		.p(6px);
+		.p-r();
+		.bg-c(#332b1f);
+		.r(5px);
+		.d-i-b();
+		.m(0 auto);
+
+	}
+	input{
+		.wh(230px,35px);
+		.r(5px);
+		.pl(12px);
+	}
+	button{
+		.wh(69px,29px);
+		.p-a();
+		.rt(12px,23%);
+		.bg-i("images/button.png");
+		.bd(none);
+		.c-p();
+		.c(white);
+		.size(17px);
+		.bold(true);
+	}
+	.bottom{
+		.p(12px,0,10px)
+	}
+	p{
+		.c(#4b443b);
+		.t-c();
+		.line(23px);
+		.size(12px);
+		a:hover{
+			.c(white);
+		}
+	}
+}
